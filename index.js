@@ -24,6 +24,7 @@ JKT48 の非フェラーボット [ KEBAB48 ]`
 const { serialize, getBuffer, fetchJson, sleep } = require("./lib/myfunc");
 const { color, mylog, infolog } = require("./lib/color");
 const cron = require('node-cron');
+const { KeepAlive } = require("./keep_alive");
 const time = moment(new Date()).format('HH:mm:ss DD/MM/YYYY')
 let setting = JSON.parse(fs.readFileSync('./config.json'));
 let session = `./session.json`
@@ -417,6 +418,7 @@ const connectToWhatsApp = async () => {
 	title()
         store.bind(conn.ev)
 	await sleep(2000);
+	KeepAlive();
 	require('./sr2')(conn);
 //	streamNewTweetsAndSendToWhatsApp(conn)
 //        cron.schedule('*/20 * * * * *', async function () {
