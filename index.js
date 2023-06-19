@@ -458,13 +458,13 @@ const connectToWhatsApp = async () => {
 	conn.multi = true
 	// conn.nopref = false
 	// conn.prefa = 'anjing'
-/*	conn.ev.on('messages.upsert', async m => {
+	conn.ev.on('messages.upsert', async m => {
 		if (!m.messages) return;
 		var msg = m.messages[0]
 		msg = serialize(conn, msg)
 		msg.isBaileys = msg.key.id.startsWith('BAE5') || msg.key.id.startsWith('3EB0')
 		require('./message/msg')(conn, msg, m, setting, store, welcome, recent)
-	})*/
+	})
 
 	//jika close atau logout
 	conn.ev.on('connection.update', (update) => {
