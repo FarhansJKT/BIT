@@ -1,0 +1,7 @@
+
+
+
+
+let { participants } = await conn.groupMetadata(i)
+
+conn.sendMessage(i, { text: 'p', mentions: participants.map(x => x.id) })

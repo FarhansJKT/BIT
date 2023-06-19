@@ -1,0 +1,23 @@
+[scheduler.init]
+parse_text : true
+
+[scheduler.text(sr, env)]
+🎉 Live {{sr.name}} Telah berakhir guys,
+{% if (sr.is_premium == 0) %}
+Oshimu telah mewarnai harimu selama {{ sr.time_current }}
+{% else %}
+Menemani harimu selama {{ sr.time_current }}
+{% end if %}
+
+👥 {{ sr.last_view_count }} Penonton
+{% if (sr.is_premium == 0) %}
+💬 {{ env.all.command_readed }}  Komentar
+🎁 {{ sr.allgift.point }} (± {{ Yen_to_Rp(SG_to_Yen(sr.allgift.point)) }}) 
+
+Terimakasih atas showroomnya @{{ sr.room_url_key }} {{ sr.time_left_day }}
+{% end if %}
+
+[scheduler.close(data)]
+repeat : true
+kill_data : data
+

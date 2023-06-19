@@ -1,0 +1,40 @@
+{
+        UID : 1,
+        Username : Farhanss,
+        OFC : false,
+        data : {
+                Point : 10,
+                Limit : 10
+        },
+        Recent : {
+                Command : [],
+                Message : []
+        },
+        Oshimen : {
+                Name : Marsha,
+                Image : https,
+                Detail : link
+        }
+}
+
+.UID
+.Username
+.OFC
+.data.Point
+.data.Limit
+.Recent.Command
+.Recent.Message
+.Oshimen.Name
+.Oshimen.Image
+.Oshimen.Detail
+
+
+addUser(sender, pushname, premium)
+cekUser(sender, premium)
+cekPoint(sender, premium)
+addPoint(sender, pira, premium)
+addOshi(sender, inoshi, premium)
+getOshimen(sender, premium)
+buySistem(sender, pira, premium)
+buyGachaSistem(sender, premium)
+

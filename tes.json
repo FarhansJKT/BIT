@@ -1,0 +1,216 @@
+{
+	"recents": [{
+		"_id": "648ee440a9452f882c92b6c7",
+		"data_id": "1687081185400713",
+		"member": {
+			"name": "Lia /リア（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1651942233/jkt48/kabesha/36_xloe2j.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/104f71ef35980e70baeb6a7ed59f18c7374f9a33bf7d1720a0581b8a0b2edb1e_m.jpeg?v=1658302116",
+			"url": "/JKT48_Lia",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-18T11:02:20.798Z",
+		"live_info": {
+			"duration": 4955798,
+			"viewers": 7864,
+			"date": {
+				"start": "2023-06-18T09:39:45.000Z",
+				"end": "2023-06-18T11:02:20.798Z"
+			}
+		},
+		"room_id": 400713,
+		"points": 34926
+	}, {
+		"_id": "648eb6f0a9452f882c74b223",
+		"data_id": "1687074367318223",
+		"member": {
+			"name": "Fiony /フィオニー（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384245/jkt48/kabesha/13.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/a2345e2127cf122ef7adb9d988a41e080dbd7f0db28bfc113335b7a341b68c7e_m.jpeg?v=1658302978",
+			"url": "/JKT48_Fiony",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-18T07:49:03.225Z",
+		"live_info": {
+			"duration": 176225,
+			"viewers": 4337,
+			"date": {
+				"start": "2023-06-18T07:46:07.000Z",
+				"end": "2023-06-18T07:49:03.225Z"
+			}
+		},
+		"room_id": 318223,
+		"points": 500
+	}, {
+		"_id": "648e05eca9452f882c045def",
+		"data_id": "1687023442318223",
+		"member": {
+			"name": "Fiony /フィオニー（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384245/jkt48/kabesha/13.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/a2345e2127cf122ef7adb9d988a41e080dbd7f0db28bfc113335b7a341b68c7e_m.jpeg?v=1658302978",
+			"url": "/JKT48_Fiony",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-17T19:13:44.967Z",
+		"live_info": {
+			"duration": 5782967,
+			"viewers": 13144,
+			"date": {
+				"start": "2023-06-17T17:37:22.000Z",
+				"end": "2023-06-17T19:13:44.967Z"
+			}
+		},
+		"room_id": 318223,
+		"points": 103720
+	}, {
+		"_id": "648b6854a9452f882c354889",
+		"data_id": "1686854814318232",
+		"member": {
+			"name": "Lulu /ルル （JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384247/jkt48/kabesha/25.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/b0dfb9a6b2a6d51b17d0149d72ac19992469d2734876ca2c1d55672ae91e0943_m.jpeg?v=1658302753",
+			"url": "/JKT48_Lulu",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-15T19:36:48.793Z",
+		"live_info": {
+			"duration": 2994793,
+			"viewers": 4536,
+			"date": {
+				"start": "2023-06-15T18:46:54.000Z",
+				"end": "2023-06-15T19:36:48.793Z"
+			}
+		},
+		"room_id": 318232,
+		"points": 7928
+	}, {
+		"_id": "648b0eada9452f882cf8e095",
+		"data_id": "1686831213318117",
+		"member": {
+			"name": "Gita/ギタ（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384247/jkt48/kabesha/18.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/388fa55ee4ee2a438a34d1b0a71de03f472b76b5560203930f103850edb577c8_m.jpeg?v=1658303341",
+			"url": "/JKT48_Gita",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-15T13:14:19.615Z",
+		"live_info": {
+			"duration": 3646615,
+			"viewers": 15508,
+			"date": {
+				"start": "2023-06-15T12:13:33.000Z",
+				"end": "2023-06-15T13:14:19.615Z"
+			}
+		},
+		"room_id": 318117,
+		"points": 24928
+	}, {
+		"_id": "648adcf7a9452f882cd4ae20",
+		"data_id": "1686817863461480",
+		"member": {
+			"name": "Jeane /ジーン（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1683991315/jkt48/kabesha/greesella_adhalia_bpy0de.jpg",
+			"img": "https://static.showroom-live.com/image/room/cover/cd068c05e4e342a9986c37a00f0342cfdfa346221a685af4e1f5fbe8a55ad58a_m.jpeg?v=1683720205",
+			"url": "/JKT48_Jeane",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-15T09:42:12.399Z",
+		"live_info": {
+			"duration": 4269399,
+			"viewers": 5183,
+			"date": {
+				"start": "2023-06-15T08:31:03.000Z",
+				"end": "2023-06-15T09:42:12.399Z"
+			}
+		},
+		"room_id": 461480,
+		"points": 8817
+	}, {
+		"_id": "6489e706a9452f882c21a5c8",
+		"data_id": "1686755128318210",
+		"member": {
+			"name": "Ashel /アシェル（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384244/jkt48/kabesha/01.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/1f4eca57063fe3f6be0bf5a66adefd5e3afa7395324c0a95e572a533c8c1f89a_m.jpeg?v=1658303138",
+			"url": "/JKT48_Ashel",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-14T16:12:51.252Z",
+		"live_info": {
+			"duration": 4043252,
+			"viewers": 17951,
+			"date": {
+				"start": "2023-06-14T15:05:28.000Z",
+				"end": "2023-06-14T16:12:51.252Z"
+			}
+		},
+		"room_id": 318210,
+		"points": 51316
+	}, {
+		"_id": "6489dafca9452f882c183b76",
+		"data_id": "1686752830318228",
+		"member": {
+			"name": "Jessi/ジェシ（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384244/jkt48/kabesha/21.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/293a846d52a0e9b04a50dafb6c0f80367256a0f3e2a7d9fdc5e92e572ad2415f_m.jpeg?v=1658302849",
+			"url": "/JKT48_Jessi",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-14T15:21:29.051Z",
+		"live_info": {
+			"duration": 3259051,
+			"viewers": 10333,
+			"date": {
+				"start": "2023-06-14T14:27:10.000Z",
+				"end": "2023-06-14T15:21:29.051Z"
+			}
+		},
+		"room_id": 318228,
+		"points": 17534
+	}, {
+		"_id": "6489d256a9452f882c126a3c",
+		"data_id": "1686750497400713",
+		"member": {
+			"name": "Lia /リア（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1651942233/jkt48/kabesha/36_xloe2j.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/104f71ef35980e70baeb6a7ed59f18c7374f9a33bf7d1720a0581b8a0b2edb1e_m.jpeg?v=1658302116",
+			"url": "/JKT48_Lia",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-14T14:44:36.233Z",
+		"live_info": {
+			"duration": 3379233,
+			"viewers": 7721,
+			"date": {
+				"start": "2023-06-14T13:48:17.000Z",
+				"end": "2023-06-14T14:44:36.233Z"
+			}
+		},
+		"room_id": 400713,
+		"points": 11077
+	}, {
+		"_id": "6489925ca9452f882ce66ce2",
+		"data_id": "1686734728318204",
+		"member": {
+			"name": "Muthe/ムテ（JKT48）",
+			"img_alt": "https://res.cloudinary.com/haymzm4wp/image/upload/v1618384248/jkt48/kabesha/27.jpg",
+			"img": "https://image.showroom-cdn.com/showroom-prod/image/room/cover/d6cd1a52b06d7bed1bd0bda75b917eb18667e060c175952babc50733bf3a7e40_m.jpeg?v=1658303278",
+			"url": "/JKT48_Muthe",
+			"is_graduate": false
+		},
+		"created_at": "2023-06-14T10:11:37.152Z",
+		"live_info": {
+			"duration": 2769152,
+			"viewers": 11469,
+			"date": {
+				"start": "2023-06-14T09:25:28.000Z",
+				"end": "2023-06-14T10:11:37.152Z"
+			}
+		},
+		"room_id": 318204,
+		"points": 4714
+	}],
+	"page": 1,
+	"perpage": 10,
+	"total_count": 6838
+}

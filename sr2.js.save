@@ -1,0 +1,207 @@
+const axios = require('axios');
+const cron = require('node-cron');
+const { serialize, getBuffer, fetchJson, sleep } = require("./lib/myfunc");
+let api = `https://48live-showroom.vercel.app/api`
+let lives = api+"/lives"
+let rooms = api+"rooms"
+
+let member = [{
+  name: 'Muthe/ムテ（JKT48）',
+  roomId: 318204,
+  started_at: 1686734728,
+  view: 11382,
+  command: 4960,
+  gift: 736
+}]
+let recent_msg = []
+
+const cekMember = (roomId, _dir) => {
+    let position = null
+    Object.keys(_dir).forEach((i) => {
+        if (_dir[i].roomId === roomId) {
+            position = i
+        }
+    })
+    if (position !== null) {
+        return position
+    }
+}
+
+const cekAda = (roomId, _dir) => {
+    let position = null
+    Object.keys(_dir).forEach((i) => {
+        if (_dir[i].roomId === roomId) {
+            position = i
+        }
+    })
+    if (position !== null) {
+        return true
+    } else {
+        return false
+    }
+}
+
+function removeObjectWithId(arr, id) {
+  // Making a copy with the Array from() method
+  const arrCopy = Array.from(arr);
+
+  const objWithIdIndex = arrCopy.findIndex((obj) => obj.roomId === id);
+  arrCopy.splice(objWithIdIndex, 1);
+  return arrCopy;
+}
+
+function cekLive(newText) {
+  if (!cekAda(newText.roomId, member)) {
+    let wak = mommenta.unix(newText.started_at).tz("Asia/jakarta").format("HH:mm") == mommenta(new Date()).tz("Asia/jakarta").format("HH:mm");
+    console.log(wak)
+    if (wak) {
+	console.log(`Si ${newText.name} Showroom...\n🕒 ${mommenta.unix(newText.started_at).tz("Asia/jakarta").format("HH:mm")} WIB\n🔗 Tonton : ${newText.name}`)
+    } else {
+        var adaga = member[member.length - 1].roomId == newText.roomId
+	if (!adaga) {
+		console.log(`Si ${newText.name} Showroom...\n🕒 ${mommenta.unix(newText.started_at).tz("Asia/jakarta").format("HH:mm")} WIB\n🔗 Tonton : ${newText.name}`)
+	}
+    }
+    // Add new text to the recent list
+    member.push(newText);
+    // Print new text to the console
+  } else {
+    if (member.length > 0) {
+     let posa = cekMember(newText.roomId, member)
+     member[posa].view = newText.view
+     member[posa].command += newText.command
+     member[posa].gift += newText.gift
+    }
+  }
+}
+
+// Function to deactivate the API endpoint
+async function deactivateEndpoint() {
+  try {
+    let siki = mommenta(new Date()).tz("Asia/jakarta").format("HH:mm");
+    // Send a GET request to the API endpoint
+    const response = await axios.get('https://48live-showroom.vercel.app/api/rooms/onlives');
+    
+    // Check if there are any live members
+    const liveMembers = response.data.data.filter(member => member.live_id);
+    console.log("* Get Ingfo Showroom");
+    if (liveMembers.length > 0) {
+      // Deactivate the endpoint if there are live members
+      // Add your code to deactivate the API endpoint here
+      for (let sr of liveMembers) {
+        const ingfo = await axios.get(lives+`/gift/${sr.room_id}`);
+        const ingfi = await axios.get(lives+`/comments/${sr.room_id}`);
+        let semuagif = 0
+        for (let allgift of ingfo.data) {
+		semuagif += allgift.num
+        }
+        let posaj = cekMember(sr.roomId, member)
+	let data_live = {
+		name: sr.main_name,
+		roomId: sr.room_id,
+		started_at: sr.started_at,
+		view: sr.view_num,
+		command: ingfi.data.length,
+		gift: semuagif
+	}
+        if (!posaj == null) {
+           data_live.gift = member[posaj].gift
+        }
+	cekLive(data_live)
+	await sleep(500);
+      }
+      // Example: Updating a flag to indicate the endpoint is deactivated
+      isEndpointActive = false;
+    } else {
+	if (member.length > 0) {
+		for (let mem of member) {
+                	let response = await cekada(mem.roomId);
+        	        if (response.is_onlive == false) {
+        	                let posm = cekMember(mem.roomId, member)
+				selesaiSr(posm);
+				await sleep(2000);
+				member = removeObjectWithId(member, mem.roomId)
+//				console.log(member);
+        	        }
+		}
+	} else {
+		console.log("Gaada member showroom "+ siki);
+	}
+   }
+  } catch (error) {
+    console.error('Error occurred while checking live members:', error);
+  }
+}
+
+// Example: Simulating a periodic check every 10 seconds
+//const interval = setInterval(deactivateEndpoint, 10000);
+
+/*const cekMember = (roomId, _dir) => {
+    let position = null
+    Object.keys(_dir).forEach((i) => {
+        if (_dir[i].roomId === roomId) {
+            position = i
+        }
+    })
+    if (position !== null) {
+        return posution
+    }
+}*/
+var mommenta = require('moment-timezone')
+async function selesaiSr(posi) {
+var ini = member[posi]
+var nama = ini.name
+var showroomStartTimes = ini.started_at
+var roomId = ini.roomId
+var start = mommenta.unix(showroomStartTimes).tz("Asia/jakarta").format("YYYY-MM-DD HH:mm:ss")
+var end = mommenta(new Date()).tz("Asia/jakarta").format("YYYY-MM-DD HH:mm:ss")
+const zonaWaktu = 'Asia/Jakarta';
+
+// Mengatur jam mulai dan jam berhenti
+const jamMulai = mommenta.tz(start, "YYYY-MM-DD HH:mm:ss", zonaWaktu);
+const jamBerhenti = mommenta.tz(end,"YYYY-MM-DD HH:mm:ss", zonaWaktu);
+
+// Menghitung selisih waktu
+const selisihWaktu = jamBerhenti.diff(jamMulai);
+
+// Mengonversi selisih waktu menjadi durasi dalam milidetik
+const durasi = mommenta.duration(selisihWaktu);
+console.log(`🎉 Live ${nama} Telah berakhir guys,
+dan telah mewarnai harimu selama ${durasi.hours()}:${durasi.minutes()}:${durasi.seconds()}
+
+👥 ${ini.view} Penonton
+💬 ${ini.command} Komentar
+🎁 ${ini.gift}G (± Rp. gatau )`)
+}
+
+async function cekada(roomId) {
+	let response = await axios.get(`https://48live-showroom.vercel.app/api/lives/info/${roomId}`);
+	console.log("[STATUS CHECK]");
+	return response.data;
+}
+
+//const interval = setInterval(deactivateEndpoint, 10000);
+// Example: Simulating a finish live event
+cron.schedule('*/10 * * * * *', async function () {
+  // Add your code to handle the finish live event here
+  await sleep(1000);
+  if (member.length > 0) {
+	for (let mem of member) {
+		let response = await cekada(mem.roomId)
+		await sleep(1000);
+		if (response.is_onlive == false) {
+			let posm = cekMember(mem.roomId, member)
+			selesaiSr(posm)
+			await sleep(2000);
+			member = removeObjectWithId(member, mem.roomId)
+//			console.log(member);
+		}
+	}
+  }
+  await deactivateEndpoint();
+  // Example: Updating a flag to indicate the endpoint is active
+  isEndpointActive = true;
+  // Restart the periodic check after the live event finishes
+//  clearInterval(interval);
+//  setInterval(deactivateEndpoint, 10000);
+});
